@@ -3,7 +3,7 @@ vim.scriptencoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 vim.opt.fileencodings = { "ucs-boms","utf-8","euc-jp","cp932" }
 vim.opt.fileformats = { "unix", "dos", "mac" }
-vim.opt.ambiwidth = "double"
+vim.opt.ambiwidth = "single"
 
 vim.opt.fenc = "utf-8"
 vim.opt.backup = false

@@ -2,8 +2,8 @@ require('lualine').setup {
   options = {
     icons_enabled = true,
     theme = 'powerline',
-    section_separators = '',
-    component_separators = '',
+    -- section_separators = '',
+    -- component_separators = '',
     refresh = {
       statusline = 1000,
       tabline = 1000,

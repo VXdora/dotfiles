@@ -15,6 +15,7 @@ if vim.call('dein#load_state', dein_dir) == 1 then
 
   vim.call('dein#add', 'lewis6991/gitsigns.nvim')
   vim.call('dein#add', 'romgrk/barbar.nvim')
+  vim.call('dein#add', 'akinsho/toggleterm.nvim')
 
   vim.call('dein#add', 'L3MON4D3/LuaSnip')
   vim.call('dein#add', 'neovim/nvim-lspconfig')
