@@ -11,6 +11,7 @@ if vim.call('dein#load_state', dein_dir) == 1 then
   vim.call('dein#add', 'nvim-tree/nvim-web-devicons')
   vim.call('dein#add', 'nvim-lualine/lualine.nvim')
   vim.call('dein#add', 'ryanoasis/vim-devicons')
+  vim.call('dein#add', 'lambdalisue/fern-renderer-devicons.vim')
   vim.call('dein#add', 'lambdalisue/fern.vim')
 
   vim.call('dein#add', 'lewis6991/gitsigns.nvim')
