@@ -5,3 +5,6 @@ require("telescope").setup({
   }
 })
 
+-- require("telescope").extensions.project.project({
+
+-- })

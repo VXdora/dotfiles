@@ -25,6 +25,7 @@ if vim.call('dein#load_state', dein_dir) == 1 then
   vim.call('dein#add', 'williamboman/mason-lspconfig.nvim')
   vim.call('dein#add', 'hrsh7th/nvim-cmp')
   vim.call('dein#add', 'hrsh7th/cmp-nvim-lsp')
+  vim.call('dein#add', 'hrsh7th/cmp-buffer')
 
   vim.call('dein#add', 'jose-elias-alvarez/null-ls.nvim')
   vim.call('dein#add', 'nvim-lua/plenary.nvim')
@@ -41,6 +42,8 @@ if vim.call('dein#load_state', dein_dir) == 1 then
   vim.call('dein#add', 'karb94/neoscroll.nvim')
 
   vim.call('dein#add', 'nvim-telescope/telescope.nvim')
+  vim.call('dein#add', 'nvim-telescope/telescope-project.nvim')
+
 
   vim.call('dein#add', 'mfussenegger/nvim-jdtls')
 
