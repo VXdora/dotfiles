@@ -17,4 +17,8 @@ require("plugins/neoscroll")
 require("plugins/telescope")
 require("plugins/whichkey")
 require("plugins/noice")
+require("plugins/indentline")
+require("plugins/gitsigns")
+require("plugins/toggleterm")
+require('plugins/illuminate')
 

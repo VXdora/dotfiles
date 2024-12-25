@@ -48,7 +48,11 @@ if vim.call('dein#load_state', dein_dir) == 1 then
   vim.call('dein#add', 'folke/noice.nvim')
   vim.call('dein#add', "MunifTanjim/nui.nvim")
   vim.call('dein#add', "rcarriga/nvim-notify")
-
+  vim.call('dein#add', 'numToStr/Comment.nvim')
+  vim.call('dein#add', 'Wansmer/treesj')
+  vim.call('dein#add', 'monaqa/dial.nvim')
+  vim.call('dein#add', 'cohama/lexima.vim')
+  vim.call('dein#add', 'lukas-reineke/indent-blankline.nvim')
 
   vim.call('dein#add', 'mfussenegger/nvim-jdtls')
 
