@@ -44,6 +44,11 @@ if vim.call('dein#load_state', dein_dir) == 1 then
   vim.call('dein#add', 'nvim-telescope/telescope.nvim')
   vim.call('dein#add', 'nvim-telescope/telescope-project.nvim')
 
+  vim.call('dein#add', 'folke/which-key.nvim')
+  vim.call('dein#add', 'folke/noice.nvim')
+  vim.call('dein#add', "MunifTanjim/nui.nvim")
+  vim.call('dein#add', "rcarriga/nvim-notify")
+
 
   vim.call('dein#add', 'mfussenegger/nvim-jdtls')
 

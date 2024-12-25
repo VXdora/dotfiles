@@ -15,4 +15,6 @@ require("plugins/fern")
 require("plugins/chowcho")
 require("plugins/neoscroll")
 require("plugins/telescope")
+require("plugins/whichkey")
+require("plugins/noice")
 
