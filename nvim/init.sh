@@ -1,4 +1,11 @@
 #!/bin/bash
+
+function npmInstall() {
+  if [ $(npm list -g | grep $1 | wc -l) -ne 1 ]; then
+    sudo npm install -g $1
+  fi
+}
+
 if [ ! -d $HOME/.config/nvim ]; then
   mkdir -p $HOME/.config/nvim
 fi
@@ -19,15 +26,9 @@ if [ $? -ne 0 ]; then
   curl -fsSL https://rpm.nodesource.com/setup_22.x | sudo bash -
   sudo dnf install nodejs -y
 fi
-if [ $(npm list -g | grep pyright | wc -l) -ne 1 ]; then
-  sudo npm install -g pyright
-fi
-if [ $(npm list -g | grep bash-language-server | wc -l) -ne 1 ]; then
-  sudo npm install -g bash-language-server
-fi
-if [ $(npm list -g | grep vscode-langservers-extracted | wc -l) -ne 1 ]; then
-  sudo npm install -g vscode-langservers-extracted
-fi
+npmInstall 'pyright'
+npmInstall 'bash-language-server'
+npmInstall 'vscode-langservers-extracted'
 
 java --version 2>&1 > /dev/null
 if [ $? -ne 0 ]; then
@@ -41,6 +42,7 @@ if [ ! -d $HOME/.config/nvim/lsp/java ]; then
   tar -xzvf jdt-language-server-latest.tar.gz
   rm jdt-language-server-latest.tar.gz
   cd $CUR_DIR
+  mkdir -p ~/eclipse-workspace/
 fi
 
 
