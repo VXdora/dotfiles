@@ -2,6 +2,7 @@
 -- molokai.lua
 -- カラースキーマmolokaiの設定
 --------------------------------------------------------
+
 vim.cmd [[
   colorscheme molokai
   set t_Co=256

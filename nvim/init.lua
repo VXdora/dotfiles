@@ -22,4 +22,7 @@ require("plugins/toggleterm")
 require('plugins/illuminate')
 require("plugins/neoscroll")
 require('plugins/colorizer')
+require('plugins/lspsaga')
+require('plugins/aerial')
+require('plugins/dial')
 

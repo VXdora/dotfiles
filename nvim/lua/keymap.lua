@@ -30,9 +30,18 @@ vim.keymap.set('n', '<leader>tb', telescope.buffers, { desc = 'Telescope buffers
 vim.keymap.set('n', '<leader>th', telescope.help_tags, { desc = 'Telescope help tags' })
 
 -- lsp
-vim.api.nvim_set_keymap('n', '<leader>ld', '<cmd>lua vim.lsp.buf.definition()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>lh', '<cmd>lua vim.lsp.buf.hover()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>lf', '<cmd>lua vim.lsp.buf.format()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>lf', '<cmd>Lspsaga finder<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>lh', '<cmd>Lspsaga hover_doc<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>lc', '<cmd>Lspsaga code_action<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>ls', '<cmd>Lspsaga show_line_diagnostics<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>ln', '<cmd>Lspsaga diagnostic_jump_next<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>lp', '<cmd>Lspsaga diagnostic_jump_prev<CR>', { noremap = true })
+
+-- aerial
+vim.api.nvim_set_keymap('n', '<leader>aa', '<cmd>AerialToggle<CR>', { noremap = true })
+
+-- treesj
+vim.api.nvim_set_keymap('n', '<leader>jj', '<cmd>lua require("treesj").toggle()')
 
 -- lazygit
 local Terminal = require("toggleterm.terminal").Terminal
