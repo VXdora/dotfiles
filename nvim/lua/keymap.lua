@@ -41,15 +41,11 @@ vim.api.nvim_set_keymap('n', '<leader>lp', '<cmd>Lspsaga diagnostic_jump_prev<CR
 vim.api.nvim_set_keymap('n', '<leader>aa', '<cmd>AerialToggle<CR>', { noremap = true })
 
 -- treesj
-vim.api.nvim_set_keymap('n', '<leader>jj', '<cmd>lua require("treesj").toggle()')
+vim.api.nvim_set_keymap('n', '<leader>jj', '<cmd>lua require("treesj").toggle()<CR>', { noremap = true })
 
 -- lazygit
 local Terminal = require("toggleterm.terminal").Terminal
-local lazygit = Terminal:new({
-	cmd = "lazygit",
-	direction = "float",
-	hidden = true
-})
+local lazygit = Terminal:new({ cmd = "lazygit", direction = "float", hidden = true })
 
 function _lazygit_toggle()
 	lazygit:toggle()
