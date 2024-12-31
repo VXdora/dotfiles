@@ -1,5 +1,14 @@
+--
+-- nvim_cmp.lua
+-- LSPクライアント周りの設定
+--
+
 local luasnip = require("luasnip")
 local cmp = require("cmp")
+local lspkind = require('lspkind')
+lspkind.setup({
+
+})
 
 cmp.setup({
   snippet = {
@@ -10,7 +19,7 @@ cmp.setup({
   sources = {
     { name = "nvim_lsp" },
     { name = "buffer" },
-    -- { name = "path" },
+    { name = "path" },
   },
   mapping = cmp.mapping.preset.insert({
     ["<C-p>"] = cmp.mapping.select_prev_item(),
@@ -31,4 +40,17 @@ cmp.setup({
   experimental = {
     ghost_text = true,
   },
+  formatting = {
+    format = lspkind.cmp_format({
+      mode = 'symbol',
+      maxwidth = 50
+    })
+  }
+})
+
+require('lspsaga').setup({
+  uii = { border = 'rounded' },
+  symbol_in_winbar = { enable = true },
+  code_action = { enable = true },
+  lightbulb = { enable = true },
 })

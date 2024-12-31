@@ -1,3 +1,8 @@
+--
+-- lspconfig.lua
+-- LS(サーバ)周りのプラグインの設定
+--
+
 local neovim_settings_root_dir = os.getenv('HOME') .. '/.config/nvim/'
 -- vim.lsp.set_log_level('debug')
 
@@ -26,6 +31,7 @@ require('lspconfig').jdtls.setup {
     '-jar', neovim_settings_root_dir .. 'lsp/java/plugins/org.eclipse.equinox.launcher_1.6.900.v20240613-2009.jar',
     '-configuration', neovim_settings_root_dir .. 'lsp/java/config_linux',
     '-data', os.getenv('HOME') .. '/eclipse-workspace'
-  }
+  },
+  root_dir = vim.fs.dirname(vim.fs.find({'.git', 'pom.xml'}, { upward = true })[1])
 }
 

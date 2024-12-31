@@ -15,7 +15,6 @@ vim.api.nvim_set_keymap('n', '<Esc><Esc>', ':nohlsearch<CR>', { noremap = true }
 vim.api.nvim_set_keymap('n', '<C-j>', ':bprev<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', ':bnext<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>bc', '<cmd>BufferClose<CR>', { noremap = true })
--- vim.api.nvim_set_keymap('n', 'ff', 'ggvG=', { noremap = true })
 
 -- insertモード時の設定
 vim.api.nvim_set_keymap('i', 'fj', '<Esc><Esc>', { silent = true })

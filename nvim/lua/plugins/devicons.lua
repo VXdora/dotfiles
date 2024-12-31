@@ -1,3 +1,8 @@
+--
+-- devicons.lua
+-- アイコン関連のプラグインの設定
+--
+
 require'nvim-web-devicons'.setup {
   override = {
     zsh = {

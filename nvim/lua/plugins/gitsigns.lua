@@ -1,8 +1,13 @@
+--
+-- gitsigns.lua
+-- 行にgitの差分のステータスを表示するプラグインの設定
+--
+
 require('gitsigns').setup({
   signs = {
     add          = { text = '┃' },
     change       = { text = '┃' },
-    delete       = { text = '_' },
+    delete       = { text = '┃' },
     topdelete    = { text = '‾' },
     changedelete = { text = '~' },
     untracked    = { text = '┆' },
@@ -10,7 +15,7 @@ require('gitsigns').setup({
   signs_staged = {
     add          = { text = '┃' },
     change       = { text = '┃' },
-    delete       = { text = '_' },
+    delete       = { text = '┃' },
     topdelete    = { text = '‾' },
     changedelete = { text = '~' },
     untracked    = { text = '┆' },
