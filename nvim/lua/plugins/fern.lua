@@ -14,3 +14,11 @@ autocmd! *
 autocmd FileType fern call glyph_palette#apply()
 augroup END
 ]])
+
+vim.api.nvim_create_autocmd("WinEnter", {
+    callback = function()
+        if (vim.bo.filetype ~= "fern") then
+            vim.cmd("FernDo close -stay")
+        end
+    end,
+})

@@ -39,3 +39,5 @@ require'nvim-web-devicons'.setup {
     },
   };
 }
+
+vim.g.fern_renderer_devicons_disable_warning = 1

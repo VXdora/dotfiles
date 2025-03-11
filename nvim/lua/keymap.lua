@@ -20,7 +20,11 @@ vim.api.nvim_set_keymap('n', '<leader>bc', '<cmd>BufferClose<CR>', { noremap = t
 vim.api.nvim_set_keymap('i', 'fj', '<Esc><Esc>', { silent = true })
 
 -- fern
-vim.api.nvim_set_keymap('n', '<leader>n', ':Fern .<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>n', ':Fern . -drawer -toggle<CR>', { noremap = true })
+vim.api.nvim_set_keymap("i", "<C-h>", "<Left>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-j>", "<Down>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-k>", "<Up>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-l>", "<Right>", { noremap = true, silent = true })
 
 -- telescope
 local telescope = require("telescope.builtin")
@@ -36,6 +40,7 @@ vim.api.nvim_set_keymap('n', '<leader>lc', '<cmd>Lspsaga code_action<CR>', { nor
 vim.api.nvim_set_keymap('n', '<leader>ls', '<cmd>Lspsaga show_line_diagnostics<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>ln', '<cmd>Lspsaga diagnostic_jump_next<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<leader>lp', '<cmd>Lspsaga diagnostic_jump_prev<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>lg', '<cmd>Lspsaga goto_definition<CR>', { noremap = true })
 
 -- aerial
 vim.api.nvim_set_keymap('n', '<leader>aa', '<cmd>AerialToggle<CR>', { noremap = true })
