@@ -21,6 +21,9 @@ require('lspconfig').cssls.setup {
 require('lspconfig').jsonls.setup {
 }
 
+require('lspconfig').gopls.setup {
+}
+
 print(neovim_settings_root_dir)
 require('lspconfig').jdtls.setup {
   cmd = {
