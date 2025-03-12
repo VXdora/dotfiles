@@ -41,11 +41,11 @@ cmp.setup({
         end,
         ["<C-n>"] = cmp.mapping.select_next_item(),
         -- ['<C-l>'] = cmp.mapping.complete(),
-        ['<C-j>'] = cmp.mapping.abort(),
+        ['<C-c>'] = cmp.mapping.abort(),
         ["<CR>"] = cmp.mapping.confirm { select = true },
     }),
     experimental = {
-        ghost_text = true,
+        ghost_text = false,
     },
     formatting = {
         format = lspkind.cmp_format({

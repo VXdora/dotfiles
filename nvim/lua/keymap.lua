@@ -20,7 +20,7 @@ vim.api.nvim_set_keymap('n', '<leader>bc', '<cmd>BufferClose<CR>', { noremap = t
 vim.api.nvim_set_keymap('i', 'fj', '<Esc><Esc>', { silent = true })
 
 -- fern
-vim.api.nvim_set_keymap('n', '<leader>n', ':Fern . -drawer -toggle<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>n', ':Fern . -reveal=%<CR>', { noremap = true })
 vim.api.nvim_set_keymap("i", "<C-h>", "<Left>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-j>", "<Down>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-k>", "<Up>", { noremap = true, silent = true })

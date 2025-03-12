@@ -25,4 +25,5 @@ require('plugins/colorizer')
 require('plugins/lspsaga')
 require('plugins/aerial')
 require('plugins/dial')
+require('plugins/treesitter')
 

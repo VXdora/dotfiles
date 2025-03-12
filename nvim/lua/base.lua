@@ -41,3 +41,5 @@ vim.opt.hlsearch = true
 
 vim.opt.termguicolors = true
 
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevel = 3
