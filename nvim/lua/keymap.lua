@@ -14,17 +14,24 @@ vim.api.nvim_set_keymap('n', '<down>', 'gj', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Esc><Esc>', ':nohlsearch<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-j>', ':bprev<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<C-k>', ':bnext<CR>', { noremap = true })
+-- 通常のvimの拡張
 vim.api.nvim_set_keymap('n', '<leader>bc', '<cmd>BufferClose<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>ko', 'o<Esc>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>kp', 'yyp', { noremap = true })
+vim.api.nvim_set_keymap('n', '<leader>k=', [[:let l:line = line('.')<CR>gg=G<CR>call cursor(l:line,0)<CR>]], { noremap = true })
 
 -- insertモード時の設定
 vim.api.nvim_set_keymap('i', 'fj', '<Esc><Esc>', { silent = true })
-
--- fern
-vim.api.nvim_set_keymap('n', '<leader>n', ':Fern . -reveal=%<CR>', { noremap = true })
 vim.api.nvim_set_keymap("i", "<C-h>", "<Left>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-j>", "<Down>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-k>", "<Up>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-l>", "<Right>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-o>", "<Esc>o", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-n>", "<BS>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<C-u>", "<Del>", { noremap = true, silent = true })
+
+-- fern
+vim.api.nvim_set_keymap('n', '<leader>n', ':Fern . -reveal=%<CR>', { noremap = true })
 
 -- telescope
 local telescope = require("telescope.builtin")

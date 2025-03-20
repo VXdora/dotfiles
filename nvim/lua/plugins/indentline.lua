@@ -7,15 +7,15 @@ vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
 vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
 
 require("ibl").setup {
-    indent = {
-        highlight = { "RainbowRed", "RainbowBlue", "RainbowYellow", "RainbowCyan" },
-        smart_indent_cap = true,
-    },
+    -- indent = {
+    --     highlight = { "RainbowRed", "RainbowBlue", "RainbowYellow", "RainbowCyan" },
+    --     smart_indent_cap = true,
+    -- },
     scope = {
-        enabled = true,
-        show_start = true,
-        show_end = false,
-        char = "_",
+        -- enabled = true,
+        -- show_start = true,
+        -- show_end = false,
+        -- char = "",
         highlight = { "RainbowRed", "RainbowBlue", "RainbowYellow", "RainbowCyan" },
     },
 }

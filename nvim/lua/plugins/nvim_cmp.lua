@@ -6,9 +6,7 @@
 local luasnip = require("luasnip")
 local cmp = require("cmp")
 local lspkind = require('lspkind')
-lspkind.setup({
-
-})
+lspkind.setup({})
 
 cmp.setup({
     snippet = {
@@ -48,10 +46,7 @@ cmp.setup({
         ghost_text = false,
     },
     formatting = {
-        format = lspkind.cmp_format({
-            mode = 'symbol',
-            maxwidth = 50
-        })
+        format = lspkind.cmp_format({ mode = 'symbol_text', maxwidth = 50 })
     },
     window = {
         completion = cmp.config.window.bordered(),
@@ -61,3 +56,8 @@ cmp.setup({
 
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'rounded' })
 vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'rounded' })
+
+vim.cmd [[
+  highlight CmpItemKindFunction guifg=#0000FF
+  highlight CmpItemKindVariable guifg=#00FF00
+]]
